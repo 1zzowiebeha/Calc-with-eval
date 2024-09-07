@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Zowie Beha">
+        
+        <link rel="stylesheet" href="styles/style.css">
+        
+        <title>Calculator</title>
+    </head>
+    <body>
+        <main>
+            <h1>Calculator App</h1>
+            <article id="calculator">
+                
+                <div id="display">
+                    <p>
+                        0
+                    </p>
+                </div>
+                
+                <div id="buttons">
+                    <div id="operators">
+                        <button class="equals-button" onclick="clearButton()">
+                            Clear
+                        </button>
+                        <button onclick="enterInput('+')">
+                            +
+                        </button>
+                        <button onclick="enterInput('-')">
+                            -
+                        </button>
+                        <button onclick="enterInput('*')">
+                            x
+                        </button>
+                        <button onclick="enterInput('/')">
+                            ÷
+                        </button>
+                        <button class="equals-button" onclick="evaluateExpression()">
+                            =
+                        </button>
+                    </div>
+                    <div id="numpad">
+                        <button onclick="enterInput('9')">
+                            9
+                        </button>
+                        <button onclick="enterInput('8')">
+                            8
+                        </button>
+                        <button onclick="enterInput('7')">
+                            7
+                        </button>
+                        <button onclick="enterInput('6')">
+                            6
+                        </button>
+                        <button onclick="enterInput('5')">
+                            5
+                        </button>
+                        <button onclick="enterInput('4')">
+                            4
+                        </button>
+                        <button onclick="enterInput('3')">
+                            3
+                        </button>
+                        <button onclick="enterInput('2')">
+                            2
+                        </button>
+                        <button onclick="enterInput('1')">
+                            1
+                        </button>
+                        <button onclick="enterInput('0')">
+                            0
+                        </button>
+                        <button onclick="enterInput('.')">
+                            .
+                        </button>
+                    </div>
+                </div>
+            </article>
+        </main>
+        
+        
+        <script src="js/calculator.js"></script>
+    </body>
+</html>
