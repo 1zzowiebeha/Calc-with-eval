@@ -32,25 +32,44 @@ main {
 }
 
 h1 {
-    color: rgb(9, 3, 33);
+    color: rgb(123, 126, 206);
+    text-shadow: 3px 3px 1px rgb(47, 38, 86);
+    margin-top: 1em;
 }
+
+main > div.flex-center {    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* =======
+Calculator widget
+========*/
+
+#calculator {
+    margin-top: 1em;
+    
+    border: 3px solid #35354b;
+    background-color: #3e3e56;
+    border-radius: 0.3em;
+    
+    /* how do I use flex-basis flex-shrink and flex-grow to make this responsive? */
+    width: 20em;
+}
+
 
 #calculator #display p {
     color: rgb(244, 242, 242);
-    font-size: large;
-    font-weight: bold;
+    font-size: xx-large;
+    font-weight: bolder;
 }
 
-#calculator {
-    border: 1px solid black;
-    background-color: #3c3c4a;
-    border-radius: 0.3em;
-    width: fit-content;
-}
 
 #calculator #display {
-    border-bottom: 3px solid rgb(33, 29, 29);
-    background-color: #454561;
+    border-bottom: 3px solid #29293f;
+    background-color: #525271;
     
     /* A way to make the squared background not clip over
     the #calculator rounded border. Masking might be a more intuitive solution here. */
@@ -62,8 +81,79 @@ h1 {
 
 #calculator #buttons {
     padding: 1em 2em;
+    display: flex;
 }
 
-/* =======
-Calculator widget
-========*/
+#calculator #buttons #operators {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1px 3px;
+}
+
+#calculator #buttons #operators button {
+    padding: 0.5em 1em;
+    border-radius: 50%;
+    border: none;
+    
+    background-color: #ef9540;
+    color: hsl(34, 67%, 29%);
+        
+    font-size: larger;
+    font-weight: bold;
+    font-family: "Nunito";
+    
+    transition-property: background-color;
+    transition-duration: 0.2s;
+}
+
+#calculator #buttons #operators button:hover {
+    background-color: #d58336;
+}
+#calculator #buttons #operators button:active {
+    background-color: #b96b22;
+}
+
+#calculator #buttons #numpad {
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 2;
+    
+    width: 25em;
+    
+    
+    align-items: flex-start;
+    align-content: space-between;
+    justify-content: center;
+}
+
+#calculator #buttons #numpad button {
+    padding: 1em 1.5em;
+    border-radius: 50%;
+    border: none;
+    
+    background-color: #EEEEEE;
+    color: #938f8f;
+        
+    font-size: large;
+    font-weight: bold;
+    font-family: "Nunito";
+    
+    transition-property: background-color;
+    transition-duration: 0.2s;
+}
+
+#calculator #buttons #numpad button:hover {
+    background-color: #cfced6;
+}
+
+#calculator #buttons #numpad button:active {
+    background-color: #bcbac3;
+}
+
+#calculator #buttons #numpad button.zero {
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 2;
+}

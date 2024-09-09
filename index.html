@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="author" content="Zowie Beha">
         
-        <!-- Google Fonts -->
+        <!-- Google Fonts    -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
@@ -17,73 +17,75 @@
     </head>
     <body>
         <main>
-            <h1>Calculator App</h1>
-            <article id="calculator">
-                
-                <div id="display">
-                    <p>
-                        0
-                    </p>
-                </div>
-                
-                <div id="buttons">
-                    <div id="operators">
-                        <button class="equals-button" onclick="clearButton()">
-                            Clear
-                        </button>
-                        <button onclick="enterInput('+')">
-                            +
-                        </button>
-                        <button onclick="enterInput('-')">
-                            -
-                        </button>
-                        <button onclick="enterInput('*')">
-                            x
-                        </button>
-                        <button onclick="enterInput('/')">
-                            ÷
-                        </button>
-                        <button class="equals-button" onclick="evaluateExpression()">
-                            =
-                        </button>
-                    </div>
-                    <div id="numpad">
-                        <button onclick="enterInput('9')">
-                            9
-                        </button>
-                        <button onclick="enterInput('8')">
-                            8
-                        </button>
-                        <button onclick="enterInput('7')">
-                            7
-                        </button>
-                        <button onclick="enterInput('6')">
-                            6
-                        </button>
-                        <button onclick="enterInput('5')">
-                            5
-                        </button>
-                        <button onclick="enterInput('4')">
-                            4
-                        </button>
-                        <button onclick="enterInput('3')">
-                            3
-                        </button>
-                        <button onclick="enterInput('2')">
-                            2
-                        </button>
-                        <button onclick="enterInput('1')">
-                            1
-                        </button>
-                        <button onclick="enterInput('0')">
+            <div class="flex-center">
+                <h1>Calculator App</h1>
+                <article id="calculator">
+                    
+                    <div id="display">
+                        <p>
                             0
-                        </button>
-                        <button onclick="enterInput('.')">
-                            .
-                        </button>
+                        </p>
                     </div>
-                </div>
-            </article>
+                    
+                    <div id="buttons">
+                        <div id="operators">
+                            <button onclick="clearButton()">
+                                C
+                            </button>
+                            <button onclick="enterInput('+')">
+                                +
+                            </button>
+                            <button onclick="enterInput('-')">
+                                -
+                            </button>
+                            <button onclick="enterInput('*')">
+                                x
+                            </button>
+                            <button onclick="enterInput('/')">
+                                ÷
+                            </button>
+                            <button class="equals-button" onclick="evaluateExpression()">
+                                =
+                            </button>
+                        </div>
+                        <div id="numpad">
+                            <button onclick="enterInput('9')">
+                                9
+                            </button>
+                            <button onclick="enterInput('8')">
+                                8
+                            </button>
+                            <button onclick="enterInput('7')">
+                                7
+                            </button>
+                            <button onclick="enterInput('6')">
+                                6
+                            </button>
+                            <button onclick="enterInput('5')">
+                                5
+                            </button>
+                            <button onclick="enterInput('4')">
+                                4
+                            </button>
+                            <button onclick="enterInput('3')">
+                                3
+                            </button>
+                            <button onclick="enterInput('2')">
+                                2
+                            </button>
+                            <button onclick="enterInput('1')">
+                                1
+                            </button>
+                            <button class="zero" onclick="enterInput('0')">
+                                0
+                            </button>
+                            <button onclick="enterInput('.')">
+                                .
+                            </button>
+                        </div>
+                    </div>
+                </article>
+            </div>
         </main>
         
         
