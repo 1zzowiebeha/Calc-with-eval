@@ -57,6 +57,8 @@ Calculator widget
     
     /* how do I use flex-basis flex-shrink and flex-grow to make this responsive? */
     width: 20em;
+    resize: both; 
+    overflow: hidden;
 }
 
 
@@ -82,14 +84,16 @@ Calculator widget
 #calculator #buttons {
     padding: 1em 2em;
     display: flex;
+    justify-content: center;
+    gap: 0px 2px;
 }
 
 #calculator #buttons #operators {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    gap: 1px 3px;
+    gap: 5px 0;
 }
 
 #calculator #buttons #operators button {
@@ -120,17 +124,42 @@ Calculator widget
     flex-wrap: wrap;
     flex-basis: 2;
     
-    width: 25em;
+    gap: 5px 0;
     
+    width: 25em;
+
     
     align-items: flex-start;
     align-content: space-between;
+    justify-content: space-between;
+    
+    resize: both; 
+    overflow: hidden;
+}
+
+#calculator #buttons #numpad div {
+    display: flex;
+    
+    gap: 10px 55px;
+    flex-basis: 33.33%;
+    flex-shrink: 2;
+    
+    align-items: center;
     justify-content: center;
 }
 
+#calculator #buttons #numpad div.zero {
+    flex-grow: 2;
+}
+
+#calculator #buttons #numpad div.zero button {
+    border-radius: 0.5em;
+    width: 100%;
+}
+
 #calculator #buttons #numpad button {
-    padding: 1em 1.5em;
-    border-radius: 50%;
+    padding: 10px 15px;
+    border-radius: .5em;
     border: none;
     
     background-color: #EEEEEE;
@@ -142,6 +171,8 @@ Calculator widget
     
     transition-property: background-color;
     transition-duration: 0.2s;
+    
+    flex-grow: 1;
 }
 
 #calculator #buttons #numpad button:hover {
