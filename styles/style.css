@@ -83,6 +83,7 @@ Calculator widget
 
 #calculator #buttons {
     padding: 1em 2em;
+    
     display: flex;
     justify-content: center;
     gap: 0px 2px;
@@ -92,19 +93,19 @@ Calculator widget
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center;
+    align-items: stretch;
     gap: 5px 0;
 }
 
 #calculator #buttons #operators button {
-    padding: 0.5em 1em;
+    padding: 0.6em 1em;
     border-radius: 50%;
     border: none;
     
     background-color: #ef9540;
     color: hsl(34, 67%, 29%);
         
-    font-size: larger;
+    font-size: x-large;
     font-weight: bold;
     font-family: "Nunito";
     
@@ -123,15 +124,12 @@ Calculator widget
     display: flex;
     flex-wrap: wrap;
     flex-basis: 2;
-    
-    gap: 5px 0;
-    
-    width: 25em;
-
-    
-    align-items: flex-start;
-    align-content: space-between;
+    align-items: stretch;
+    align-content: stretch;
     justify-content: space-between;
+    
+    height: fit-content;
+    width: fit-content;
     
     resize: both; 
     overflow: hidden;
@@ -140,12 +138,36 @@ Calculator widget
 #calculator #buttons #numpad div {
     display: flex;
     
-    gap: 10px 55px;
+    /* gap: 10px 55px; */
     flex-basis: 33.33%;
     flex-shrink: 2;
     
-    align-items: center;
-    justify-content: center;
+    align-items: stretch;
+    justify-content: stretch;
+    outline: 2px solid blue;
+}
+
+#calculator #buttons #numpad button {
+    /* Hack to get a gap without forcing wrapping */
+    margin: 2.5px;
+    border: none;
+    
+    /* How do I get the buttons to match the operators size?
+    Maybe I need to just make it all column based? */
+    border-radius: 50%;
+    padding: 0.6em 1em;
+    
+    background-color: #EEEEEE;
+    color: #938f8f;
+
+    font-size: large;
+    font-weight: bold;
+    font-family: "Nunito";
+
+    transition-property: background-color;
+    transition-duration: 0.2s;
+    
+    flex-grow: 1;
 }
 
 #calculator #buttons #numpad div.zero {
@@ -155,24 +177,6 @@ Calculator widget
 #calculator #buttons #numpad div.zero button {
     border-radius: 0.5em;
     width: 100%;
-}
-
-#calculator #buttons #numpad button {
-    padding: 10px 15px;
-    border-radius: .5em;
-    border: none;
-    
-    background-color: #EEEEEE;
-    color: #938f8f;
-        
-    font-size: large;
-    font-weight: bold;
-    font-family: "Nunito";
-    
-    transition-property: background-color;
-    transition-duration: 0.2s;
-    
-    flex-grow: 1;
 }
 
 #calculator #buttons #numpad button:hover {
